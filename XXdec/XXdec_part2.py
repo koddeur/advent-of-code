@@ -13,11 +13,11 @@ def xxxYYY_partTwo(file):
     Return : 
     count -- 
     """
+    count=0
+
     f = open(file, "r")
     line=f.readline()
-    count=0
     while (line != ''):
-
         line=f.readline()
 
     return count

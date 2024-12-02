@@ -26,6 +26,7 @@ do
         done
         
         name="# DAY $day : ${challenge_days[day]} #"
+        echo ""
         echo $top
         echo $name
         echo $bottom
@@ -35,6 +36,6 @@ do
         echo ""
         python3 $FOLDER/$PART2.py $FOLDER/inputs/$INPUT.txt
         echo ""
-        echo ""
+        
     fi
 done
