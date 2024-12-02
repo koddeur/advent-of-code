@@ -3,29 +3,39 @@
 
 import sys
 
-def isOnlyDecreaseOrIncrease(levels):
+def is_a_report_safe(report):
     """
+    Determine if a report is safe or not
+
+    Args : 
+    report -- list of levels
+
+    Return : 
+    boolean -- True if the report is safe, False otherwise
     """
     decreasing=False
     increasing=False
-    if int(levels[0]) > int(levels[1]) : 
+    first_level=int(report[0])
+    second_level=int(report[1])
+
+    if first_level > second_level : 
         decreasing=True
-    elif int(levels[0]) < int(levels[1]): 
+    elif first_level < second_level: 
         increasing=True
 
     if(decreasing or increasing):
         i=0
         error=False
-        while i < len(levels)-1:
-            levelA = int(levels[i])
-            levelB = int(levels[i+1])
+        while i < len(report)-1:
+            level_a = int(report[i])
+            level_b = int(report[i+1])
 
             if decreasing :
-                if (levelA <= levelB) or abs(levelA-levelB)>3:
+                if (level_a <= level_b) or abs(level_a-level_b)>3:
                     decreasing=False
                     break
             elif increasing :
-                if (levelA >= levelB) or abs(levelA-levelB)>3:
+                if (level_a >= level_b) or abs(level_a-level_b)>3:
                     increasing=False
                     break
             i+=1
@@ -35,7 +45,7 @@ def isOnlyDecreaseOrIncrease(levels):
             return False
 
 
-def redNosedReports_partTwo(file):
+def red_nosed_reports_part2(file):
     """
     Red-Nosed Reports part two
 
@@ -43,7 +53,7 @@ def redNosedReports_partTwo(file):
     file -- the input file
 
     Return : 
-    count -- 
+    count -- number of reports safe
     """
     count=0
 
@@ -51,17 +61,17 @@ def redNosedReports_partTwo(file):
     line=f.readline()
     while (line != ''):
         if line[-1] == "\n" : 
-            levels = line[:-1].split(" ")
+            report = line[:-1].split(" ")
         else: 
-            levels = line.split(" ")
+            report = line.split(" ")
         
-        if isOnlyDecreaseOrIncrease(levels) :
+        if is_a_report_safe(report) :
             count+=1
         else :
             i=0
-            for level in levels:
-                newLevels=levels[:i]+levels[i+1:]
-                if isOnlyDecreaseOrIncrease(newLevels):
+            for level in report:
+                newreport=report[:i]+report[i+1:]
+                if is_a_report_safe(newreport):
                     count+=1
                     break
                 i+=1
@@ -75,7 +85,7 @@ def main():
     print('# Day 02 - part 2')
     print('-----------------')
     arg1 = sys.argv[1]
-    print('Result => {}'.format(redNosedReports_partTwo(arg1)))
+    print('Result => {}'.format(red_nosed_reports_part2(arg1)))
 
 if __name__=="__main__":
     main()

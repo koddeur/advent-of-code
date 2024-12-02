@@ -3,7 +3,7 @@
 
 import sys
 
-def historianHysteria_partTwo(file):
+def historian_hysteria_part2(file):
     """
     Historian hysterian part two
 
@@ -38,7 +38,7 @@ def main():
     print('# Day 01 - part 2')
     print('-----------------')
     arg1 = sys.argv[1]
-    print('Result => {}'.format(historianHysteria_partTwo(arg1)))
+    print('Result => {}'.format(historian_hysteria_part2(arg1)))
 
 if __name__=="__main__":
     main()
