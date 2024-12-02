@@ -35,8 +35,8 @@ def historianHysteria_partTwo(file):
     return count
 
 def main():
-    print('# Day 1 - part 2')
-    print('----------------')
+    print('# Day 01 - part 2')
+    print('-----------------')
     arg1 = sys.argv[1]
     print('Result => {}'.format(historianHysteria_partTwo(arg1)))
 

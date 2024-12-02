@@ -38,8 +38,8 @@ def historianHysteria_partOne(file):
     return count
 
 def main():
-    print('# Day 1 - part 1')
-    print('----------------')
+    print('# Day 01 - part 1')
+    print('-----------------')
     arg1 = sys.argv[1]
     print('Result => {}'.format(historianHysteria_partOne(arg1)))
 
