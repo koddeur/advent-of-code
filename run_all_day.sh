@@ -3,6 +3,7 @@
 challenge_days=(
     ""
     "Historian Hysteria"
+    "Red-Nosed Reports"
 )
 
 for day in $(seq -f "%02g" 1 25)
