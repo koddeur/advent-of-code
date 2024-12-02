@@ -3,15 +3,15 @@
 
 import sys
 
-def xxxYYY_partOne(file):
+def xxx_yyy_part1(file):
     """
-    xxx YYY part one
+    xxx yyy part one
 
     Args : 
     file -- the input file
 
     Return : 
-    count -- 
+    count -- the result
     """
     count=0
 
@@ -26,7 +26,7 @@ def main():
     print('# Day XX - part 1')
     print('-----------------')
     arg1 = sys.argv[1]
-    print('Result => {}'.format(xxxYYY_partOne(arg1)))
+    print('Result => {}'.format(xxx_yyy_part1(arg1)))
 
 if __name__=="__main__":
     main()
