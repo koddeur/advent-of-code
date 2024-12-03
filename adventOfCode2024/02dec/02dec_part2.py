@@ -75,7 +75,6 @@ def red_nosed_reports_part2(file):
                     count+=1
                     break
                 i+=1
-
         
         line=f.readline()
 

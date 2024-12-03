@@ -14,9 +14,9 @@ def red_nosed_reports_part1(file):
     count -- number of reports safe
     """
     count=0
-
     f = open(file, "r")
     line=f.readline()
+    
     while (line != ''):
         report = line.split(" ")
         decreasing=False
