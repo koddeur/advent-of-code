@@ -1,8 +1,7 @@
 #!/usr/bin/env python3 
 # author : Mael Avennec
 
-import sys
-import re
+import sys,re
 
 def mull_it_over_part2(file):
     """
@@ -42,7 +41,7 @@ def main():
     print('# Day 03 - part 2')
     print('-----------------')
     arg1 = sys.argv[1]
-    print('operationult => {}'.format(mull_it_over_part2(arg1)))
+    print('Result => {}'.format(mull_it_over_part2(arg1)))
 
 if __name__=="__main__":
     main()
