@@ -14,17 +14,18 @@ Check that `python3` is installed
   python3 -V
 ```
 
-## ⏯️ Run Locally
+## ▶️ Run Locally
 
 Clone the project [adventOfCode2023](https://github.com/mavennec/adventOfCode2023)
 
 ```bash
-  git clone https://github.com/koddeur/adventOfCode2024.git
+  git clone https://github.com/koddeur/advent-of-code.git
 ```
 
 Go to the project directory
 
 ```bash
+  cd advent-of-code
   cd adventOfCode2024
 ```
 
