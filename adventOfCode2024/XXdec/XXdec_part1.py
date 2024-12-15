@@ -7,11 +7,11 @@ def xxx_yyy_part1(file):
     """
     xxx yyy part one
 
-    Args : 
-    file -- the input file
+    Args:
+        file (String): the input file name
 
-    Return : 
-    count -- the result
+    Returns:
+        int: the result
     """
     count=0
 
