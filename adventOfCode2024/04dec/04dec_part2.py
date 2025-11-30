@@ -3,7 +3,7 @@
 
 import sys
 
-def isCoordinateInThePuzzle(coordinate, max_length, max_height):
+def is_coordinate_in_the_puzzle(coordinate, max_length, max_height):
     """
     Check if the coordinate is inside the limit
 
@@ -75,9 +75,9 @@ def ceres_search_part2(file):
         if puzzle[letter] == 'A' :
             isXmas=True
             test_coordinate=(letter[0]-1,letter[1]-1)
-            if isCoordinateInThePuzzle(test_coordinate,count_letters,count_lines) and (puzzle[test_coordinate]=='M' or puzzle[test_coordinate]=='S'):
+            if is_coordinate_in_the_puzzle(test_coordinate,count_letters,count_lines) and (puzzle[test_coordinate]=='M' or puzzle[test_coordinate]=='S'):
                 opposite_coordinate=(letter[0]+1,letter[1]+1)
-                if isCoordinateInThePuzzle(opposite_coordinate,count_letters,count_lines):
+                if is_coordinate_in_the_puzzle(opposite_coordinate,count_letters,count_lines):
                     if(puzzle[test_coordinate]=='M'):
                         if(puzzle[opposite_coordinate]!='S'):
                             isXmas=False
@@ -90,9 +90,9 @@ def ceres_search_part2(file):
                 isXmas=False
             
             test_coordinate=(letter[0]+1,letter[1]-1)
-            if isCoordinateInThePuzzle(test_coordinate,count_letters,count_lines) and (puzzle[test_coordinate]=='M' or puzzle[test_coordinate]=='S'):
+            if is_coordinate_in_the_puzzle(test_coordinate,count_letters,count_lines) and (puzzle[test_coordinate]=='M' or puzzle[test_coordinate]=='S'):
                 opposite_coordinate=(letter[0]-1,letter[1]+1)
-                if isCoordinateInThePuzzle(opposite_coordinate,count_letters,count_lines):
+                if is_coordinate_in_the_puzzle(opposite_coordinate,count_letters,count_lines):
                     if(puzzle[test_coordinate]=='M'):
                         if(puzzle[opposite_coordinate]!='S'):
                             isXmas=False

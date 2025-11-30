@@ -3,7 +3,7 @@
 
 import sys
 
-def isCoordinateInThePuzzle(coordinate, max_length, max_height):
+def is_coordinate_in_the_puzzle(coordinate, max_length, max_height):
     """
     Check if the coordinate is inside the limit
 
@@ -78,17 +78,17 @@ def ceres_search_part1(file):
                 y=-1
                 while y <= 1:
                     next_coordinate=(letter[0]+x,letter[1]+y)
-                    if isCoordinateInThePuzzle(next_coordinate,count_letters,count_lines) :
+                    if is_coordinate_in_the_puzzle(next_coordinate,count_letters,count_lines) :
                         
                         if puzzle[(next_coordinate[0],next_coordinate[1])]=='M':
                             dir=(x,y)
                             next_coordinate=(next_coordinate[0]+dir[0], next_coordinate[1]+dir[1])
                             
-                            if isCoordinateInThePuzzle((next_coordinate[0],next_coordinate[1]),count_letters,count_lines):
+                            if is_coordinate_in_the_puzzle((next_coordinate[0],next_coordinate[1]),count_letters,count_lines):
                                 if puzzle[(next_coordinate[0],next_coordinate[1])]=='A':
                                     next_coordinate=(next_coordinate[0]+dir[0], next_coordinate[1]+dir[1])
                                     
-                                    if isCoordinateInThePuzzle((next_coordinate[0],next_coordinate[1]),count_letters,count_lines):
+                                    if is_coordinate_in_the_puzzle((next_coordinate[0],next_coordinate[1]),count_letters,count_lines):
                                         if puzzle[(next_coordinate[0],next_coordinate[1])]=='S':
                                             count+=1
                     y+=1
