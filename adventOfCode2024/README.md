@@ -16,7 +16,7 @@ Check that `python3` is installed
 
 ## ▶️ Run Locally
 
-Clone the project [adventOfCode2023](https://github.com/koddeur//advent-of-code)
+Clone the project [adventOfCode2024](https://github.com/koddeur/advent-of-code)
 
 ```bash
   git clone https://github.com/koddeur/advent-of-code.git
