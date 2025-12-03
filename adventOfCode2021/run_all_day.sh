@@ -2,6 +2,7 @@
 
 challenge_days=(
     ""
+    "Sonar sweep"
 )
 
 for day in $(seq -f "%02g" 1 25)
