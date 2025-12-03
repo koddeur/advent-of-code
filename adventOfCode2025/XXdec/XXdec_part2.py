@@ -16,9 +16,9 @@ def xxx_yyy_part2(file):
     count=0
 
     f = open(file, "r")
-    line=f.readline()
+    line=f.readline().replace("\n","")
     while (line != ''):
-        line=f.readline()
+        line=f.readline().replace("\n","")
 
     return count
 
