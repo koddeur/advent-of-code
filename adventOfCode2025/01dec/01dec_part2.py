@@ -17,11 +17,8 @@ def secret_entrance_part2(file):
     position=50
 
     f = open(file, "r")
-    line=f.readline()
+    line=f.readline().replace("\n","")
     while (line != ''):
-        
-        if (line[-1] == '\n') :
-            line=line[:-1]
         
         rotation=line[0]
         increment=int(line[1:])
@@ -29,8 +26,8 @@ def secret_entrance_part2(file):
         if (rotation == "R"):
             i=0
             while(i < increment):
-                i+=1
                 
+                i+=1
                 if(position+1 == 100):
                     count+=1
                     
@@ -38,7 +35,6 @@ def secret_entrance_part2(file):
                     position = 0
                 else :
                     position += 1
-            
         else :
             i=0
             while(i < increment):
@@ -52,7 +48,7 @@ def secret_entrance_part2(file):
                 else :
                     position = position - 1
 
-        line = f.readline()
+        line = f.readline().replace("\n","")
     return count
 
 # TESTS LILAS
@@ -122,7 +118,7 @@ def main():
     print('# Day 01 - part 2')
     print('-----------------')
     arg1 = sys.argv[1]
-    print('Result => {}'.format(test(arg1)))
+    print('Result => {}'.format(secret_entrance_part2(arg1)))
 
 if __name__=="__main__":
     main()

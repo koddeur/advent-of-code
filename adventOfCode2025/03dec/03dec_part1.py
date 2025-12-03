@@ -16,12 +16,9 @@ def lobby_part1(file):
     count=0
 
     f = open(file, "r")
-    line=f.readline()
+    line=f.readline().replace("\n","")
     while (line != ''):
-        if (line[-1] == '\n') :
-            line=line[:-1]
-            
-        bank = [int(i) for i in line]      
+        bank = [int(i) for i in line]   
         
         first_max_digit=max(bank[:-1]) 
         index_max = bank.index(first_max_digit)+1
@@ -31,7 +28,7 @@ def lobby_part1(file):
         
         count+=jolts
         
-        line=f.readline()
+        line=f.readline().replace("\n","")
 
     return count
 

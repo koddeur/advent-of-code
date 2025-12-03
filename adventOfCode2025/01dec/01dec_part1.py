@@ -17,12 +17,9 @@ def secret_entrance_part1(file):
     position=50
 
     f = open(file, "r")
-    line=f.readline()
-    while (line != ''):
-        
-        if (line[-1] == '\n') :
-            line=line[:-1]
-        
+    line=f.readline().replace("\n","")
+    while (line != ''):   
+         
         rotation=line[0]
         increment=int(line[1:])
         
@@ -34,7 +31,6 @@ def secret_entrance_part1(file):
                     position = 0
                 else :
                     position += 1
-            
         else :
             i=0
             while(i < increment):
@@ -47,7 +43,7 @@ def secret_entrance_part1(file):
         if(position == 0):
             count+=1
             
-        line = f.readline()
+        line = f.readline().replace("\n","")
     return count
 
 def main():

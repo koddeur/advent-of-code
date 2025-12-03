@@ -16,13 +16,10 @@ def lobby_part2(file):
     count=0
 
     f = open(file, "r")
-    line=f.readline()
-    while (line != ''):
-        if (line[-1] == '\n') :
-            line=line[:-1]
-            
-        bank = [int(i) for i in line]  
+    line=f.readline().replace("\n","")
+    while (line != ''): 
         jolts = ""
+        bank = [int(i) for i in line]  
         
         i=0
         j=11
@@ -38,10 +35,10 @@ def lobby_part2(file):
             
             i+=1
             j-=1        
-
+            
         count+=int(jolts)
         
-        line=f.readline()
+        line=f.readline().replace("\n","")
 
     return count
 
