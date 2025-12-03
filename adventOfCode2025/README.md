@@ -16,7 +16,7 @@ Check that `python3` is installed
 
 ## ▶️ Run Locally
 
-Clone the project [adventOfCode2024](https://github.com/koddeur/advent-of-code)
+Clone the project [adventOfCode2025](https://github.com/koddeur/advent-of-code)
 
 ```bash
   git clone https://github.com/koddeur/advent-of-code.git
@@ -26,7 +26,7 @@ Go to the project directory
 
 ```bash
   cd advent-of-code
-  cd adventOfCode2024
+  cd adventOfCode2025
 ```
 
 Go to the day directory
@@ -59,7 +59,7 @@ cd 01dec
 Output :
 # Day 1 - part 1
 ----------------
-Result => 1223326
+Result => 1048
 ```
 
 
