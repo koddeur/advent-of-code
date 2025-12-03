@@ -14,6 +14,17 @@ Check that `python3` is installed
   python3 -V
 ```
 
+Make sure external lib are installed
+```bash
+  pip3 show sympy
+```
+
+If it's not installed, install it
+
+```bash
+  python3 -m pip install sympy
+```
+
 ## ▶️ Run Locally
 
 Clone the project [adventOfCode2025](https://github.com/koddeur/advent-of-code)
