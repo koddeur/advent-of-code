@@ -3,6 +3,7 @@
 challenge_days=(
     ""
     "Secret Entrance"
+    "Gift Shop"
 )
 
 for day in $(seq -f "%02g" 1 25)
