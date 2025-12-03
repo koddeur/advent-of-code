@@ -11,6 +11,7 @@ challenge_days=(
     "Camel Cards"
     "Haunted Wasteland"
     "Mirage Maintenance"
+    "Pipe Maze"
     "Cosmic Expansion"
 )
 
@@ -28,8 +29,7 @@ do
         
         top="#############"
         bottom="#############"
-        echo $day
-        echo ${#challenge_days[day]}
+        day=$((10#$day))
         for (( i=0; i<${#challenge_days[day]}; i++ )); do
             top+="#"
             bottom+="#"

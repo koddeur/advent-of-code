@@ -38,17 +38,17 @@ def cosmicExpansion_partOne(file):
             y+=1
         if(isEmptyColumn==True):
             for xNew in range(x+1,lengthUniverse+countNoGalaxyColumns):
-                print(xNew)
+                # print(xNew)
                 for yNew in range(heightUniverse):
                     if((xNew+1,yNew) not in board.keys()):
                         board[(xNew+1,yNew)]='.'
                     board[(xNew,yNew)]=board[(xNew+1,yNew)]
 
-    print(board)
-    print(lengthUniverse)
-    print(heightUniverse)
-    print(countNoGalaxyRows)
-    print(countNoGalaxyColumns)
+    # print(board)
+    # print(lengthUniverse)
+    # print(heightUniverse)
+    # print(countNoGalaxyRows)
+    # print(countNoGalaxyColumns)
     printBoard()
     return 0
 
@@ -62,7 +62,7 @@ def printBoard():
         for x in range(lengthUniverse) :
             output+=board[(x,y)]
         output+="\n"
-    print(output)
+    # print(output)
 
 
 def parse_input(file_path):
